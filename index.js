@@ -148,15 +148,26 @@ The returned object should have the following characteristics:
          (1) causes the odometer in the object to be increased by the distance,
          (2) returns the updated value of the `odometer`.
 */
-let newCar = {};
+// let newCar = {};
 
-function carMaker(odometer) {
-newCar = {
-  odometer: odometer,
-  drive: function(distance) {
+// function carMaker(odometer) {
+// newCar = {
+//   odometer: odometer,
+//   drive: function(distance) {
+//     this.odometer += distance;
+//     return this.odometer;
+//   }
+// }
+// return newCar
+// }
+
+function Car(odometer) {
+  this.odometer = odometer,
+  this.drive = function(distance) {
     this.odometer += distance;
     return this.odometer;
   }
-}
-return newCar
-}
+};
+
+let volvo = new Car(10);
+console.log(volvo)
