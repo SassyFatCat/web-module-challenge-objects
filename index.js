@@ -8,9 +8,9 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 
 function createMenuItem(name, cost, category){
     return {
-      name: name,
-      cost: cost,
-      category: category
+      name,
+      cost,
+      category
     }
 }
 
