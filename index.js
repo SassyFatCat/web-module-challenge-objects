@@ -104,9 +104,12 @@ function getLastReview(arr) {
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
-  }
+function getReviewByRating(arr, rating) {
+  let rangedReviews = [];
+  arr.forEach(element => element.rating >= rating ? rangedReviews.push(element) : null)
+
+  return rangedReviews;
+}
 
   
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
